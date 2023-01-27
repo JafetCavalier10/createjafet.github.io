@@ -1,0 +1,2745 @@
+/*
+    Este archivo de estilo CSS contiene una serie de reglas para personalizar
+    la apariencia de un sitio web.
+*/
+
+/* Importar tipos de letra de Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900');
+
+/* Importar archivos CSS adicionales */
+@import url(css/animate.css);
+@import url(css/animate.min.css);
+@import url(css/loading.css);
+@import url(css/bootstrap-select.css);
+@import url(css/flaticon.css);
+@import url(css/prettyPhoto.css);
+@import url(css/owl.carousel.css);
+@import url(css/font-awesome.min.css);
+
+/*
+    Establecer valores predeterminados para el elemento body y el elemento html.
+    Estos valores se aplicarán a todos los elementos dentro de estos elementos.
+*/
+body {
+    color: #333; /* Color de texto */
+    font-size: 15px; /* Tamaño de fuente */
+    font-family: 'Titillium Web', sans-serif; /* Familia de tipos de letra */
+    line-height: 1.80857; /* Espaciado entre líneas */
+}
+
+html, body{
+    height: 100%; /* Altura completa del navegador */
+}
+
+/*
+    Establecer un fondo de imagen para las secciones con la clase "section"
+    que se encuentren dentro de un elemento con la clase "demos".
+*/
+body.demos .section {
+    background: url(images/bg.png) repeat top center #f2f3f5;
+}
+
+/*
+    Establecer el ancho máximo para las imágenes con la clase "section-title"
+    y mostrarlas como bloques centrados.
+*/
+body.demos .section-title img {
+    max-width: 280px;
+    display: block;
+    margin: 10px auto;
+}
+
+/*
+    Establecer un borde inferior para los elementos h3 dentro de los elementos
+    con la clase "service-widget", establecer un tamaño de fuente y espaciado
+    entre líneas y establecer un fondo blanco para estos elementos.
+*/
+body.demos .service-widget h3 {
+    border-bottom: 1px solid #ededed; /* Borde inferior */
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 20px 0; /* Espaciado entre líneas */
+    background-color: #ffffff; /* Color de fondo */
+}
+
+
+/*
+    Establecer margen y relleno para los elementos con la clase "service-widget"
+    y establecer un fondo blanco para estos elementos.
+*/
+body.demos .service-widget {
+    margin: 0 0 30px; /* Margen */
+    padding: 30px; /* Relleno */
+    background-color: #fff /* Color de fondo */
+}
+
+/*
+    Establecer el ancho máximo para los elementos con la clase "-fluid".
+*/
+body.demos .container-fluid {
+    max-width: 1080px; /* Ancho máximo */
+}
+
+/*
+    Establecer una transición suave para los elementos a al hacer clic en ellos
+    y cambiar su color de texto y decoración de texto.
+*/
+a {
+    color: #1f1f1f; /* Color de texto */
+    text-decoration: none !important; /* Decoración de texto */
+    outline: none !important; /* Outline */
+    -webkit-transition: all .3s ease-in-out; /* Transición para Chrome */
+    -moz-transition: all .3s ease-in-out; /* Transición para Firefox */
+    -ms-transition: all .3s ease-in-out; /* Transición para Internet Explorer */
+    -o-transition: all .3s ease-in-out; /* Transición para Opera */
+    transition: all .3s ease-in-out; /* Transición para otros navegadores */
+}
+
+
+/*
+    Establecer reglas de estilo para los elementos de encabezado (h1, h2, h3, etc.)
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;/* Espaciado entre letras */
+    font-weight: normal; /* Peso de la fuente */
+    position: relative;    /* Posición relativa */
+    padding: 0 0 10px 0;  /* Relleno */
+    font-weight: normal; /* Peso de la fuente */
+    line-height: 120% !important;   /* Línea de altura */
+    color: #1f1f1f;    /* Color de texto */
+    margin: 0;    /* Margen */
+}
+
+/* Tamaño de fuente para el elemento h1 */
+h1 {
+    font-size: 24px
+}
+
+/* Tamaño de fuente para el elemento h2 */
+h2 {
+    font-size: 22px
+}
+
+/* Tamaño de fuente para el elemento h3 */
+h3 {
+    font-size: 18px
+}
+
+/* Tamaño de fuente para el elemento h4 */
+h4 {
+    font-size: 16px
+}
+
+/* Tamaño de fuente para el elemento h5 */
+h5 {
+    font-size: 14px
+}
+
+/* Tamaño de fuente para el elemento h6 */
+h6 {
+    font-size: 13px
+}
+
+/*
+    Establecer reglas de estilo para los elementos de enlace (a) dentro de los
+    elementos de encabezado (h1, h2, h3, etc.).
+*/
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;    /* Color de texto */
+    text-decoration: none!important;   /* Decoración de texto */
+    opacity: 1;    /* Opacidad */
+}
+
+/*
+    Establecer reglas de estilo para los elementos de enlace (a) dentro de los
+    elementos de encabezado (h1, h2, h3, etc.) al hacer hover sobre ellos.
+*/
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    opacity: .8;    /* Opacidad */
+}
+
+/*
+    Establecer reglas de estilo para todos los elementos de enlace (a).
+*/
+a {
+    color: #1f1f1f;    /* Color de texto */
+    text-decoration: none;    /* Decoración de texto */
+    outline: none;    /* Eliminación del outline */
+}
+
+/*
+    Establecer una transición suave para los elementos de enlace (a) y elementos
+    con la clase "btn" al hacer clic en ellos y cambiar su decoración de texto.
+*/
+a,
+.btn {
+    text-decoration: none !important;/* Decoración de texto */
+    outline: none !important;/* Eliminación del outline */
+    -webkit-transition: all .3s ease-in-out;/* Transición para Chrome */
+    -moz-transition: all .3s ease-in-out;/* Transición para Firefox */
+    -ms-transition: all .3s ease-in-out;/* Transición para Internet Explorer */
+    -o-transition: all .3s ease-in-out;/* Transición para Opera */
+    transition: all .3s ease-in-out;/* Transición para otros navegadores */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "btn-custom".
+*/
+.btn-custom {
+    border: 2px solid #ddd;/* Borde */background-color: transparent !important;/* Color de fondo */    margin-top: 20px;/* Margen */
+    padding: 12px 40px;/* Relleno */
+    font-size: 16px;/* Tamaño de fuente */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "lead".
+*/
+.lead {
+    font-size: 18px; /* Tamaño de fuente */
+    line-height: 30px; /* Línea de altura */
+    color: #767676; /* Color de texto */
+    margin: 0;  /* Margen */
+    padding: 0;  /* Relleno */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la etiqueta "blockquote".
+*/
+blockquote {
+    margin: 20px 0 20px; /* Margen */
+    padding: 30px; /* Relleno */
+}
+
+/*
+    Establecer reglas de estilo para elementos con las etiquetas "ul", "li" y "ol".
+*/
+ul, li, ol{
+    list-style: none; /* Estilo de lista */
+    margin: 0px;  /* Margen */
+    padding: 0px;  /* Relleno */
+}
+
+
+/*
+    Establecer reglas de estilo para elementos que utilizan clases de WordPress.
+*/
+
+/*
+    Establecer reglas de estilo para elementos con la clase "first".
+*/
+.first {
+    clear: both /* Limpiar flotadores */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "last".
+*/
+.last {
+    margin-right: 0 /* Margen derecho */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "alignnone".
+*/
+.alignnone {
+    margin: 5px 20px 20px 0;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "aligncenter" y para
+    elementos con la etiqueta "div" y la clase "aligncenter".
+*/
+.aligncenter,
+div.aligncenter {
+    display: block;/* Bloque */
+    margin: 5px auto 5px auto;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "alignright".
+*/
+.alignright {
+    float: right;/* Flotar a la derecha */
+    margin: 10px 0 20px 20px;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "alignleft".
+*/
+.alignleft {
+    float: left;/* Flotar a la izquierda */
+    margin: 10px 20px 20px 0;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos de enlace (a) que contienen imágenes
+    con la clase "alignright".
+*/
+a img.alignright {
+    float: right;/* Flotar a la derecha */
+    margin: 10px 0 20px 20px;/* Margen */
+}
+
+
+/*
+    Establecer reglas de estilo para elementos de enlace (a) que contienen imágenes
+    con la clase "alignnone".
+*/
+a img.alignnone {
+    margin: 10px 20px 20px 0;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos de enlace (a) que contienen imágenes
+    con la clase "alignleft".
+*/
+a img.alignleft {
+    float: left;/* Flotar a la izquierda */
+    margin: 10px 20px 20px 0;/* Margen */
+}
+
+/*
+    Establecer regras de estilo para elementos de enlace (a) que contienen imágenes
+    con la clase "aligncenter".
+*/
+a img.aligncenter {
+    display: block;/* Bloque */
+    margin-left: auto;/* Margen izquierdo */
+    margin-right: auto/* Margen derecho */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "wp-caption".
+*/
+.wp-caption {
+    background: #fff;/* Fondo */
+    border: 1px solid #f0f0f0;/* Borde */
+    max-width: 96%;/* Ancho máximo */
+    padding: 5px 3px 10px;/* Relleno */
+    text-align: center;/* Alineación */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "wp-caption" y la clase "alignnone".
+*/
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;/* Margen */
+}
+
+
+/*
+    Establecer reglas de estilo para elementos con la clase "wp-caption" y la clase "alignleft".
+*/
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "wp-caption" y la clase "alignright".
+*/
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;/* Margen */
+}
+
+
+/*
+    Establecer reglas de estilo para elementos de imagen (img) que están dentro de elementos
+    con la clase "wp-caption".
+*/
+.wp-caption img {
+    border: 0 none;/* Borde */
+    height: auto;/* Altura */
+    margin: 0;/* Margen */
+    max-width: 98.5%;/* Ancho máximo */
+    padding: 0;/* Relleno */
+    width: auto;/* Ancho */
+}
+
+/*
+    Establecer reglas de estilo para elementos de párrafo (p) con la clase "wp-caption-text"
+    que están dentro de elementos con la clase "wp-caption".
+*/
+.wp-caption p.wp-caption-text {
+    font-size: 11px;/* Tamaño de fuente */
+    line-height: 17px;/* Altura de línea */
+    margin: 0;/* Margen */
+    padding: 0 4px 5px;/* Relleno */
+}
+
+
+/*
+    Establecer reglas de estilo para elementos con la clase "screen-reader-text".
+    Estos elementos son destinados únicamente para lectores de pantalla.
+*/
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);/* Recortar elemento */
+    position: absolute !important;/* Posición absoluta */
+    height: 1px;/* Altura */
+    width: 1px;/* Ancho */
+    overflow: hidden;/* Ocultar contenido */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "screen-reader-text" que están
+    enfocados.
+*/
+.screen-reader-text:focus {
+    background-color: #f1f1f1;/* Color de fondo */
+    border-radius: 3px;/* Borde redondeado */
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);/* Sombra */
+    clip: auto !important;/* Mostrar elemento */
+    color: #21759b;/* Color */
+    display: block;/* Bloque */
+    font-size: 14px;/* Tamaño de fuente */
+    font-size: 0.875rem;/* Tamaño de fuente en unidades de rem */
+    font-weight: bold;/* Negrita */
+    height: auto;/* Altura */
+    left: 5px;/* Margen izquierdo */
+    line-height: normal;/* Altura de línea normal */
+    padding: 15px 23px 14px;/* Relleno */
+    text-decoration: none;/* Sin subrayado */
+    top: 5px;/* Margen superior */
+    width: auto;/* Ancho */
+    z-index: 100000;/* Capa */
+}/* Por encima de la barra de herramientas de WP */
+
+/* Establecer reglas de estilo para elementos con la clase "mus". */
+.mus {
+
+}
+
+
+/*------------------------------------------------------------------
+    HEADER
+-------------------------------------------------------------------*/
+
+/*
+    Establecer reglas de estilo para elementos con la clase "top-add".
+    Estos elementos tienen un fondo de color rojo y un borde sin redondear.
+*/
+.top-add {
+    background: #ed2d46;/* Fondo de color rojo */
+    border: none;/* Sin borde */
+    border-radius: 0px;/* Sin borde redondeado */
+    color: #ffffff;/* Color blanco */
+    margin: 0px;/* Margen */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "top-navbar". Estos elementos
+    tienen una posición relativa y una capa de 10.
+*/
+.top-navbar {
+    position: relative;/* Posición relativa */
+    z-index: 10;/* Capa */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "navbar" que están dentro de
+    elementos con la clase "top-navbar" */
+
+.top-navbar .navbar {
+   
+    padding: 15px 0px;/*Relleno de 15px*/
+    width: 100%;/* Ancho del 100% */
+    -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);/* Sombra */
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;/* Transición */
+    -webkit-transform: translate3d(0, 0, 0);/* Transformación */
+    transform: translate3d(0, 0, 0);
+    z-index: 100;/* Capa */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "top-navbar" que tienen la clase
+    "fixed-menu". Estos elementos tienen una posición fija, un ancho del 100% y una sombra.
+    También tienen una transición y una transformación.
+*/
+.top-navbar.fixed-menu {
+    position: fixed;/* Posición fija */
+    width: 100%;/* Ancho del 100% */
+    top: 0;/* Margen superior */
+    -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);/* Sombra */
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;/* Transición */
+    -webkit-transform: translate3d(0, 0, 0);/* Transformación */
+    transform: translate3d(0, 0, 0);
+
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "nav-link" que están dentro de un elemento
+    con la clase "nav-item" que cumplen las condiciones anteriores. Estos elementos tienen una
+    posición relativa, espaciado de relleno de 10px en la parte superior e inferior y 20px a los lados,
+    y un color de texto blanco.
+*/
+.top-navbar .navbar-light .navbar-nav .nav-link {
+    position: relative;/* Posición relativa */
+    padding: 10px 20px;/* Relleno */
+    color: #ffffff;/* Color de texto */
+}
+
+/*
+    Establecer reglas de estilo para el contenido que sigue a elementos con la clase "nav-link" que
+    cumplen las condiciones anteriores. Este contenido consiste en un elemento con un fondo rojo, una
+    capa inferior, un ancho y un alto de 10px, una posición absoluta y una transición lineal de 0.3s.
+*/
+.top-navbar .navbar-light .navbar-nav .nav-link::after {
+    content: "";/* Contenido */
+    background: linear-gradient(90deg,red,black);/* Fondo rojo */
+    z-index: -1;/* Capa inferior */
+    /* Ancho y alto */
+    width: 10px;
+    height: 10px;
+    position: absolute;/* Posición absoluta */
+    bottom: 0;/* Parte inferior */
+    left: 0;/* Parte izquierda */
+    border-radius: 0px 50px 0px 0px; /* Border radius */
+    transition: .3s linear;/* Transición lineal */
+}
+/*
+    Establecer reglas de estilo para elementos con la clase "nav-link" que están dentro de un elemento
+    con la clase "nav-item" que cumplen las condiciones anteriores y también tienen la clase "active".
+    Estos elementos tienen un peso de fuente de 700.
+*/
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+    font-weight: 700;/* Peso de fuente */
+}
+
+/*
+    Establecer reglas de estilo para elementos con la clase "nav-item" que están dentro de un elemento
+    con la clase "navbar-nav" que está dentro de un elemento con la clase "navbar-light" que está
+    dentro de un elemento con la clase "navbar" que está dentro de un elemento con la clase
+    "top-navbar". Estos elementos tienen un fondo negro, una posición relativa y una capa inferior.
+*/
+.top-navbar .navbar-light .navbar-nav .nav-item {
+    background: #010101;/* Fondo negro */
+    position: relative;/* Posición relativa */
+    z-index: 0;/* Capa inferior */
+}
+
+/* Estilo para elementos "nav-link" cuando el usuario pasa el cursor del mouse sobre ellos */
+.top-navbar .navbar-light .navbar-nav .nav-link:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 15px 0px 0px;
+}
+
+/* Estilo para elementos "navbar-nav" */
+.top-navbar .navbar-nav{  
+  position: relative;
+  z-index: 0;
+}
+
+/* Estilo para elementos "navbar-toggler" */
+.navbar-light .navbar-toggler{
+  padding: 5px 10px 10px;
+  margin: 0 0 0 10px;
+  position: relative;
+  border-radius: 2px;
+  border-color: rgba(0,0,0,.5);
+  z-index: 9999;
+}
+
+/* Estilo para elementos "icon-bar" */
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+/* Estilo adicional para elementos "icon-bar" */
+.navbar-toggler .icon-bar {
+  background: #010101;
+  transition: all 0.2s;
+  width: 0 auto;
+  width: 25px;
+  margin-top: 5px;
+}
+
+/* Estilo para elementos "icon-bar" cuando el usuario pasa el cursor del mouse sobre ellos */
+.navbar-toggler .icon-bar:hover {
+  background: #ed2d43;
+}
+
+/*------------------------------------------------------------------
+    Banner
+-------------------------------------------------------------------*/
+
+/* Esta regla establece que el elemento con la clase "full-width" debe tener
+   un ancho y un alto del 100% */
+#full-width{
+  width: 100%;
+  height: 100%;
+}
+
+/* Esta regla establece que los elementos con la clase "display-table" deben
+   tener un display de tipo "table" y un ancho y un alto del 100% */
+.display-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+/* Esta regla establece que los elementos con la clase "display-table-cell" deben
+   tener un display de tipo "table-cell" y una alineación vertical en el centro */
+.display-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Estas reglas establecen el fondo y el tamaño del fondo para los elementos
+   con las clases "slider-01", "slider-02" y "slider-03", y establecen su altura
+   en un 100% de la altura de la ventana del navegador */
+.slider-01{
+  background: url(uploads/slider-img-01.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.slider-02{
+  background: url(uploads/slider-img-02.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.slider-03{
+  background: url(uploads/slider-img-03.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Aplica estilos al primer elemento con las clases 'item' y 'slider-01' */
+.item.slider-01 {
+  /* sin estilos específicos */
+}
+
+/* Aplica estilos a todos los elementos 'h2' que se encuentren 
+   dentro de un elemento con la clase 'big-tagline', que a su vez 
+   esté dentro de un elemento con la clase 'home-hero' */
+.home-hero .big-tagline h2 {
+  font-size: 48px;
+  color: #ffffff;
+  padding: 20px 0px;
+}
+
+/* Aplica estilos a todos los elementos 'p' que cumplan con la misma
+   estructura de elementos que la regla anterior */
+.home-hero .big-tagline p {
+  color: #ffffff;
+  padding: 0px 0px 30px 0px;
+}
+
+/* Aplica estilos a todos los elementos con la clase 'overlay' */
+.overlay {
+  position: relative;
+}
+
+/* Aplica estilos al pseudo-elemento '::before' de todos los elementos
+   con la clase 'overlay' */
+.overlay::before {
+  content: "";
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+/* Aplica estilos a todos los elementos con la clase 'owl-prev' que se 
+   encuentren dentro de un elemento con la clase 'owl-nav', que a su vez 
+   esté dentro de un elemento con la clase 'home-hero' */
+.home-hero .owl-nav .owl-prev {
+  position: absolute;
+  left: 0px;
+}
+
+/* Aplica estilos al mismo elemento cuando el usuario coloque el cursor
+   sobre él */
+.home-hero .owl-nav .owl-prev:hover i {
+  background: #ed2d46;
+  color: #ffffff;
+}
+
+/* Aplica estilos a todos los elementos con la clase 'owl-next' que 
+   cumplen con la misma estructura de elementos que la regla anterior */
+.home-hero .owl-nav .owl-next {
+  position: absolute;
+  right: 0px;
+}
+
+/* Aplica estilos al mismo elemento cuando el usuario coloque el cursor
+   sobre él */
+.home-hero .owl-nav .owl-next:hover i {
+  background: #ed2d46;
+  color: #ffffff;
+}
+/*------------------------------------------------------------------
+    SECTIONS
+-------------------------------------------------------------------*/
+
+/* Regla para elementos con la clase "parallax" */
+.parallax {
+    background-attachment: fixed;/* Fija la imagen de fondo en su lugar y no se mueve al hacer scroll */
+    background-size: cover;/* Ajusta la imagen de fondo al tamaño del elemento y la cubre completamente */
+    height: 100%;/* Hace que el elemento ocupe toda la altura disponible en su contenedor */
+    padding: 0px;/* Quita el espaciado interno del elemento */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    width: 100%;/* Hace que el elemento ocupe todo el ancho disponible en su contenedor */
+}
+
+/* Regla para elementos con la clase "parallax" y "parallax-off" */
+.parallax.parallax-off {
+    background-attachment: scroll !important;/* Sobrescribe la propiedad "background-attachment" y asegura que tenga prioridad */
+    display: block;/* Hace que el elemento se comporte como un bloque y ocupe todo el ancho disponible en su contenedor */
+    height: 100%;/* Hace que el elemento ocupe toda la altura disponible en su contenedor */
+    min-height: 100%;/* Establece una altura mínima para el elemento igual a la altura disponible en su contenedor */
+    overflow: hidden;/* Oculta cualquier contenido que sobresalga del elemento */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    background-position: center center;/* Posiciona la imagen de fondo en el centro del elemento */
+    vertical-align: sub;/* Alinea el elemento con el texto de la línea de base */
+    width: 100%;/* Hace que el elemento ocupe todo el ancho disponible en su contenedor */
+    z-index: 2;/* Establece una capa sobre la que se posicionarán otros elementos */
+}
+
+/* Regla para el pseudo-elemento "::before" de elementos con la clase "parallax-off" */
+.parallax-off::before {
+    content: "";/* No se muestra ningún contenido adicional */
+    position: absolute; /* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    width: 100%;/* Hace que el elemento ocupe todo el ancho disponible en su contenedor */
+    height: 100%;/* Hace que el elemento ocupe toda la altura disponible en su contenedor */
+    background: rgba(0,0,0,.6);/* Aplica un color de fondo de color negro con una transparencia del 60% */
+    /* Posiciona el elemento en la esquina superior izquierda de su contenedor */
+    left: 0px;
+    top: 0px;
+}
+
+/* Regla para elementos con la clase "no-scroll-xy" */
+.no-scroll-xy {
+    overflow: hidden !important;/* Oculta cualquier contenido que sobresalga del elemento y asegura que esta propiedad tenga prioridad */
+    -webkit-transition: all .4s ease-in-out;/* Crea una animación suave durante 0.4 segundos al cambiar cualquier propiedad del elemento en navegadores webkit */
+    -moz-transition: all .4s ease-in-out;/* Crea una animación suave durante 0.4 segundos al cambiar cualquier propiedad del elemento en navegadores Mozilla */
+    -ms-transition: all .4s ease-in-out;/* Crea una animación suave durante 0.4 segundos al cambiar cualquier propiedad del elemento en navegadores Microsoft */
+    -o-transition: all .4s ease-in-out;/* Crea una animación suave durante 0.4 segundos al cambiar cualquier propiedad del elemento en navegadores Opera */
+    transition: all .4s ease-in-out;/* Crea una animación suave durante 0.4 segundos al cambiar cualquier propiedad del elemento en cualquier navegador */
+}
+
+
+/* Regla para elementos con la clase "section" */
+.section {
+    /* Hace que el elemento se comporte como un bloque y ocupe todo el ancho disponible en su contenedor */
+    display: block;
+    /* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    position: relative;
+    /* Oculta cualquier contenido que sobresalga del elemento */
+    overflow: hidden;
+    /* Añade un espaciado interno de 70px al top y al bottom del elemento */
+    padding: 70px 0;
+}
+
+/* Regla para elementos con la clase "noover" */
+.noover {
+    overflow: visible;/* Muestra cualquier contenido que sobresalga del elemento */
+}
+
+/* Regla para elementos con la clase "btn-dark" que estén dentro de un elemento con la clase "noover" */
+.noover .btn-dark {
+    border: 0 !important;/* Quita el borde del elemento y asegura que esta propiedad tenga prioridad */
+}
+
+/* Regla para elementos con la clase "nopad" */
+.nopad {
+    padding: 0;/* Quita el espaciado interno del elemento */
+}
+
+/* Regla para elementos con la clase "nopadtop" */
+.nopadtop {
+    padding-top: 0;/* Quita el espaciado interno del elemento en la parte superior */
+}
+
+/* Regla para elementos con la clase "section" y "wb" */
+.section.wb {
+    background-color: #ffffff;/* Establece un color de fondo blanco */
+}
+
+/* Regla para elementos con la clase "section" y "lb" */
+.section.lb {
+    background-color: #f2f3f5;/* Establece un color de fondo gris claro */
+}
+
+/* Regla para elementos con la clase "section" y "db" */
+.section.db {
+    background-color: #1f1f1f;/* Establece un color de fondo negro */
+}
+
+/* Regla para elementos con la clase "section" y "color1" */
+.section.color1 {
+    background-color: #448AFF;/* Establece un color de fondo azul claro */
+}
+
+/* Regla para elementos con la clase "first-section" */
+.first-section {
+    display: block;/* Hace que el elemento se comporte como un bloque y ocupe todo el ancho disponible en su contenedor */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    overflow: hidden;/* Oculta cualquier contenido que sobresalga del elemento */
+    padding: 16em 0 13em;/* Añade un espaciado interno de 16em al top y de 13em al bottom del elemento */
+}
+
+/* Regla para el pseudo-elemento "::before" de elementos con la clase "first-section" */
+.first-section::before {
+    content: "";/* No se muestra ningún contenido adicional */
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    /* Posiciona el elemento en la esquina superior izquierda de su contenedor */
+    top: 0px;
+    left: 0px;
+    width: 100%;/* Hace que el elemento ocupe todo el ancho disponible en su contenedor */
+    height: 100%;/* Hace que el elemento ocupe toda la altura disponible en su contenedor */
+    background: #000000;/* Aplica un color de fondo negro */
+}
+
+/* Regla para el pseudo-elemento "::before" de elementos con la clase "first-section" */
+.first-section::before {
+    opacity: 0.5;/* Establece una transparencia del 50% */
+}
+
+/* Regla para elementos h2 que estén dentro de un elemento con la clase "first-section" */
+.first-section h2 {
+    color: #ffffff;/* Establece un color de texto blanco */
+    font-size: 68px;/* Establece un tamaño de fuente de 68 pixels */
+    font-weight: 300;/* Establece un grosor de fuente ligero */
+    text-transform: capitalize;/* Transforma el texto para que la primera letra de cada palabra sea mayúscula */
+    display: block;/* Hace que el elemento se comporte como un bloque y ocupe todo el ancho disponible en su contenedor */
+    margin: 0;/* Quita el margen del elemento */
+    padding: 0 0 30px;/* Añade un espaciado interno de 0px al top y al bottom, y de 30px al left del elemento */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+}
+
+/* Regla para elementos con la clase "big-tagline" */
+.big-tagline {
+    padding: 10px 0px;/* Añade un espaciado interno de 10px al top y al bottom del elemento */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    z-index: 2;/* Sitúa el elemento encima de otros elementos en la capa de visualización (en el eje "z") */
+}
+
+/* Regla para elementos con la clase "lead" que estén dentro de un elemento con la clase "first-section" */
+.first-section .lead {
+    font-size: 21px;/* Establece un tamaño de fuente de 21 pixels */
+    font-weight: 300;/* Establece un grosor de fuente ligero */
+    padding: 0 0 40px;/* Añade un espaciado interno de 0px al top y al bottom, y de 40px al left del elemento */
+    margin: 0;/* Quita el margen del elemento */
+    line-height: inherit;/* Hace que el alto de línea herede el valor del elemento padre */
+    color: #ffffff;/* Establece un color de texto*/
+}
+
+/* Regla para elementos con la clase "macbookright" */
+.macbookright {
+    width: 980px;/* Establece un ancho de 980 pixels */
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    right: -15%;/* Mueve el elemento 15% hacia la derecha en relación a su posición normal en el flujo del documento */
+    bottom: -6%;/* Mueve el elemento 6% hacia abajo en relación a su posición normal en el flujo del documento */
+}
+
+/* Regla para elementos con la clase "section-title" */
+.section-title {
+    display: block;/* Hace que el elemento se comporte como un bloque y ocupe todo el ancho disponible en su contenedor */
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+    margin-bottom: 60px;/* Añade un margen de 60px al bottom del elemento */
+}
+
+/* Regla para elementos "p" que estén dentro de un elemento con la clase "section-title" */
+.section-title p {
+    color: #999;/* Establece un color de texto gris claro */
+    font-weight: 400;/* Establece un grosor de fuente normal */
+    font-size: 18px;/* Establece un tamaño de fuente de 18 pixels */
+    line-height: 33px;/* Establece un alto de línea de 33 pixels */
+    margin: 0;/* Quita el margen del elemento */
+}
+
+/* Regla para elementos h3 que estén dentro de un elemento con la clase "section-title" */
+.section-title h3 {
+    font-size: 42px;/* Establece un tamaño de fuente de 42 pixels */
+    font-weight: 300;/* Establece un grosor de fuente ligero */
+    line-height: 62px;/* Establece un alto de línea de 62 pixels */
+    margin: 0 0 25px;/* Quita el margen del elemento */
+    padding: 0;/* Quita el espaciado interno del elemento */
+    text-transform: none;/* No transforma el texto del elemento */
+}
+
+/* Regla para elementos p y h3 que estén dentro de un elemento con la clase "section" y también h3 que esté dentro de un elemento con la clase "db" */
+.section.colorsection p,
+.section.colorsection h3,
+.section.db h3 {
+    color: #ffffff;/* Establece un color de texto blanco */
+}
+
+/* Regla para elementos con la clase "our-inner-taem" */
+.our-inner-taem {
+    position: relative;/* Posiciona el elemento en relación a su posición normal en el flujo del documento */
+}
+
+/* Regla para elementos "::before" que estén dentro de un elemento con la clase "t-top" y que a su vez esté dentro de un elemento con la clase "our-inner-taem" */
+.our-inner-taem .t-top::before {
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    content: "";/* Establece un contenido en blanco */
+    width: 0px;/* Establece un ancho de 0 pixels */
+    right: 0px;/* Sitúa el elemento a la derecha del contenedor */
+    top: 0px;/* Sitúa el elemento en la parte superior del contenedor */
+    height: 2px;/* Establece una altura de 2 pixels */
+    background-color: #000;/* Establece un color de fondo negro */
+    /* Establece una transición suave para los diferentes navegadores */
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+/* Regla para elementos "::after" que estén dentro de un elemento con la clase "t-top" y que a su vez esté dentro de un elemento con la clase "our-inner-taem" */
+.our-inner-taem .t-top::after {
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    content: "";/* Establece un contenido en blanco */
+    right: 0px;/* Sitúa el elemento a la derecha del contenedor */
+    top: 0px;/* Sitúa el elemento en la parte superior del contenedor */
+    width: 2px;/* Establece un ancho de 2 pixels */
+    height: 0px;/* Establece una altura de 0 pixels */
+    background-color: #000;/* Establece un color de fondo negro */
+   /* Establece una transición suave para los diferentes navegadores */
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+
+/* Regla para elementos "small" que estén dentro de un elemento con la clase "section-title" y que a su vez esté dentro de un elemento con la clase "parallax-inner-bg" */
+.parallax-inner-bg .section-title small {
+    color: #ffffff;/* Establece un color de texto blanco */
+}
+
+/* Regla para elementos "::before" que estén dentro de un elemento con la clase "t-bottom" y que a su vez esté dentro de un elemento con la clase "our-inner-taem" */
+.our-inner-taem .t-bottom::before {
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    content: "";/* Establece un contenido en blanco */
+    width: 0px;/* Establece un ancho de 0 pixels */
+    left: 0px;/* Sitúa el elemento a la izquierda del contenedor */
+    bottom: 0px;/* Sitúa el elemento en la parte inferior del contenedor */
+    height: 2px;/* Establece una altura de 2 pixels */
+    background-color: #000;/* Establece un color de fondo negro */
+     /* Establece una transición suave para los diferentes navegadores */
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* Regla para elementos "::after" que estén dentro de un elemento con la clase "t-bottom" y que a su vez esté dentro de un elemento con la clase "our-inner-taem" */
+.our-inner-taem .t-bottom::after {
+    position: absolute;/* Posiciona el elemento en relación a su contenedor más cercano con posición no estática */
+    content: "";/* Establece un contenido en blanco */
+    left: 0px;/* Sitúa el elemento a la izquierda del contenedor */
+    bottom: 0px;/* Sitúa el elemento en la parte inferior del contenedor */
+    width: 2px;/* Establece un ancho de 2 pixels */
+    height: 0px;/* Establece una altura de 0 pixels */
+    background-color: #000;  /* Establece un color de fondo negro */
+     /* Establece una transición suave para los diferentes navegadores */
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+/* Cuando se pasa el cursor del mouse sobre el elemento con la clase our-inner-taem. ...se aplican los siguientes estilos a los elementos con las clases t-top y t-bottom 
+  Al elemento con la clase t-top se le aplican los estilos a sus pseudo-elementos ::before y ::after */
+.our-inner-taem:hover .t-top::before{
+	width: 100%;/* Al ancho del pseudo-elemento ::before se le asigna el valor 100% */
+}
+.our-inner-taem:hover .t-top::after{
+	height: 100%;/* El alto del pseudo-elemento ::before se le asigna el valor 100% */
+}
+
+
+.our-inner-taem:hover .t-bottom::before{
+	width: 100%;/* Al ancho del pseudo-elemento ::before se le asigna el valor 100% */
+}
+.our-inner-taem:hover .t-bottom::after{
+	height: 100%;/* El alto del pseudo-elemento ::before se le asigna el valor 100% */
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------
+    TESTIMONIALS
+-------------------------------------------------------------------*/
+
+.logos img {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.logos img:hover {
+    opacity: 0.5;
+}
+
+.desc h3 i {
+    color: #111111;
+    font-size: 37px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.desc {
+    padding: 30px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0,0,0,0.8);
+	border-radius: 2px;
+	text-align: right;
+}
+
+.parallax-inner-bg{
+	background: url(uploads/parallax_20.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.testi-meta {
+    display: block;
+    margin-top: 20px;
+	text-align: right;
+}
+
+.testi-meta i{
+	font-size: 28px;
+	color: #ffffff;
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    color: #f23;
+    text-shadow: 0px 0px 1px black,
+                 1px 1px 4px black;
+    padding: 13px 0 0;
+}
+
+.testimonial img {
+    max-width: 55px;
+}
+
+.testimonial small {
+    margin-top: 7px;
+    font-size: 16px;
+    display: block;
+}
+
+.testimonial {
+    background-color: transparent;
+}
+
+.testimonial h3 {
+    padding: 0 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.testimonial small,
+.testimonial .lead {
+    background-color: transparent;
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.desc h3{
+    color: #f12 !important;
+}
+.testimonial p:after {
+    display:none;
+}
+
+.testi-carousel .owl-nav .owl-prev i{
+	background: #ffffff;
+}
+
+.testi-carousel .owl-nav .owl-prev:hover i{
+	background: #ed2d46;
+	color: #ffffff;
+}
+
+.testi-carousel .owl-nav .owl-next i{
+	background: #ffffff;
+}
+
+.testi-carousel .owl-nav .owl-next:hover i{
+	background: #ed2d46;
+	color: #ffffff;
+}
+
+
+
+
+/*------------------------------------------------------------------
+    PRICING TABLES
+-------------------------------------------------------------------*/
+
+.pricing-table {
+    margin: 50px 0 0 0;
+    background: #fff;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table i {
+    width: 30px;
+    color: #c2c2c2;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px solid #ececec;
+}
+
+.pricing-table .btn-dark {
+    padding: 10px 24px;
+    font-size: 15px;
+}
+
+.pricing-table strong {
+    font-weight: 600;
+    margin-right: 6px;
+    color: #1f1f1f;
+}
+
+.pricing-table-header {
+    padding: 30px 0 25px 0;
+    background: #ffffff;
+}
+
+.pricing-table-header h2 {
+    font-size: 31px;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.pricing-table-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #aaaaaa;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.pricing-table-space {
+    height: 10px;
+}
+
+.pricing-table-text {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid #ececec;
+    font-weight: 300;
+    line-height: 30px;
+    color: #c2c2c2;
+    font-size: 16px;
+}
+
+.pricing-table-text p {
+    font-weight: 400;
+}
+
+.pricing-table-features {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 30px;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+    line-height: 30px;
+    font-size: 16px;
+    color: #c2c2c2;
+}
+
+.pricing-table-highlighted h3,
+.pricing-table-highlighted h2 {
+    color: #ffffff !important;
+}
+
+.pricing-table-sign-up {
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+
+/* Highlighted table */
+
+.pricing-table-highlighted {
+    margin-top: 0;
+}
+
+.m130 {
+    margin-top: 130px;
+}
+
+.nav-pills {
+    border: 1px solid #e1e1e1;
+}
+
+.nav-pills > li {
+    width: 50%;
+    padding: 10px;
+    float: left;
+    margin: 0 !important;
+}
+
+.nav-pills > li > a {
+    margin: 0!important;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.about-tab .nav-tabs{
+	border: none;
+	padding: 20px;
+	display: block;
+	text-align: center;
+}
+.about-tab .nav-tabs > li{
+	margin: 0px;
+	display: inline-block;
+	text-align: center;
+	float: none;
+}
+
+.about-tab .nav-pills > li a{
+	border-radius: 2px;
+	border: none;
+}
+
+body.barber_version .about-tab .nav-pills > li a:hover{
+	color: #ffffff;
+	background: #111111;
+	border: none;
+}
+.about-tab .nav-pills > li > a.active{
+	border: none;
+	background: #ed2d46;
+	color: #ffffff;
+}
+
+.about-tab .tab-content > .tab-pane{
+	padding: 20px;
+	text-align: center;
+}
+.about-tab .tab-content > .tab-pane ul li{
+	display: inline-block;
+	margin: 0px 10px;
+}
+.about-tab .tab-content > .tab-pane ul li i{
+	margin-right: 10px;
+}
+
+
+/*------------------------------------------------------------------
+    ICON BOXES
+-------------------------------------------------------------------*/
+
+.icon-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+}
+
+.icon-wrapper i {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 28px;
+    background-color: #f2f3f5;
+    color: #1f1f1f;
+    margin-top: 0;
+}
+
+.small-icons.icon-wrapper:hover i,
+.small-icons.icon-wrapper:hover i:hover,
+.small-icons.icon-wrapper i {
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    color: #e3e3e3 !important;
+    background-color: transparent !important;
+    background: none !important;
+    margin-right: 10px !important;
+    vertical-align: middle;
+    font-size: 24px !important;
+}
+
+.small-icons.icon-wrapper h3 {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.small-icons.icon-wrapper p {
+    padding: 0;
+    margin: 0;
+}
+
+.icon-wrapper h3 {
+    font-size: 21px;
+    padding: 0 0 15px;
+    margin: 0;
+}
+
+.icon-wrapper p {
+    margin-bottom: 0;
+    padding-left: 95px;
+}
+
+.icon-wrapper p small {
+    display: block;
+    color: #999;
+    margin-top: 10px;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.icon-wrapper p small:after {
+    content: "\f105";
+    font-family: FontAwesome;
+    margin-left: 5px;
+    font-size: 11px;
+}
+
+
+
+/*------------------------------------------------------------------
+    MESSAGE BOXES
+-------------------------------------------------------------------*/
+
+.service-widget h3 {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 12px 0 12px;
+    margin: 0;
+	font-weight: 700;
+}
+
+.service-widget p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.message-box{
+	background: url(uploads/about-bg.jpg) no-repeat center;
+	background-size: cover;
+	padding: 40px 0px;
+}
+
+.message-box h4 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    color: #999;
+}
+
+.message-box h2 {
+    font-size: 38px;
+    font-weight: 600;
+    padding: 0 0 10px;
+    margin: 0;
+    line-height: 62px;
+    margin-top: 0;
+    text-transform: none;
+}
+
+.message-box p {
+    margin-bottom: 20px;
+}
+
+.message-box .lead {
+    padding-top: 10px;
+    font-size: 19px;
+    font-style: normal;
+    color: #ed2d46;
+    padding-bottom: 0;
+}
+
+
+.post-media {
+    position: relative;
+
+}
+
+.post-media img {
+    width: 100%;
+}
+
+.playbutton {
+    position: absolute;
+    color: #ffffff !important;
+    top: 40%;
+    font-size: 60px;
+    z-index: 12;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: -20px auto;
+}
+
+.hoverbutton {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    color: #1f1f1f !important;
+    top: 48%;
+    font-size: 21px;
+    z-index: 12;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: -20px auto;
+}
+
+.service-widget:hover .hoverbutton {
+    opacity: 1;
+}
+
+hr.hr1 {
+    position: relative;
+    margin: 60px 0;
+    border: 1px dashed #f2f3f5;
+}
+
+hr.hr2 {
+    position: relative;
+    margin: 17px 0;
+    border: 1px dashed #f2f3f5;
+}
+
+hr.hr3 {
+    position: relative;
+    margin: 25px 0 30px 0;
+    border: 1px dashed #f2f3f5;
+}
+
+hr.invis {
+    border-color: transparent;
+}
+
+hr.invis1 {
+    margin: 10px 0;
+    border-color: transparent;
+}
+
+.section.parallax hr.hr1 {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sep1 {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #1f1f1f;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.sep2 {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #1f1f1f;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.dit-box{
+
+	text-align: left;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+}
+.owl-services .owl-nav .owl-prev i{
+	background: #010101;
+	color: #ffffff;
+}
+.owl-services .owl-nav .owl-prev:hover i{
+	background: #ed2d46;
+	color: #ffffff;
+}
+
+.owl-services .owl-nav .owl-next i{
+	background: #010101;
+	color: #ffffff;
+}
+.owl-services .owl-nav .owl-next:hover i{
+	background: #ed2d46;
+	color: #ffffff;
+}
+
+/* Divider Styles */
+
+.divider-wrapper {
+    width: 100%;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    height: 540px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.divider-wrapper:hover {
+    cursor: none;
+}
+
+.divider-bar {
+    position: absolute;
+    width: 10px;
+    left: 50%;
+    top: -10px;
+    bottom: -15px;
+}
+
+.code-wrapper {
+    border: 1px solid #ffffff;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("uploads/code.jpg") no-repeat;
+}
+
+.design-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.design-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("uploads/design.jpg") no-repeat;
+}
+
+
+/*------------------------------------------------------------------
+    FEATURES
+-------------------------------------------------------------------*/
+
+.customwidget h1 {
+    font-size: 44px;
+    color: #ffffff;
+    padding: 15px 0 25px;
+    margin: 0;
+    line-height: 1 !important;
+    font-weight: 300;
+}
+
+.customwidget ul {
+    padding: 0;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.customwidget li i {
+    margin-right: 5px;
+}
+
+.customwidget li {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.image-center img {
+    position: relative;
+    margin: 0 0 -208px;
+    z-index: 10;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.customwidget p {
+    font-style: italic;
+    font-size: 18px;
+    padding: 0 0 10px;
+}
+
+.img-center img {
+    width: 100%;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.img-center {
+    margin: auto;
+}
+
+#features li p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#features li {
+    display: table;
+    width: 100%;
+    margin: 35px 0;
+    cursor: pointer;
+}
+
+.features-left,
+.features-right {
+    padding: 0 10px;
+}
+
+.features-right li:last-child,
+.features-left li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0 !important;
+}
+
+.features-right li i,
+.features-left li i {
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    display: table;
+    border-radius: 50%;
+    font-size: 26px;
+    background-color: #f2f3f5;
+    margin: 0 auto 22px;
+    position: relative;
+    text-align: center;
+    z-index: 55;
+    transition: .4s;
+    padding: 0;
+}
+
+#features i img {
+    display: table;
+    margin: 0 auto;
+}
+
+.features-left li i:before,
+.features-right li i:before {
+    text-align: center;
+}
+
+.features-right li i .ico-current,
+.features-left li i .ico-current {
+    opacity: 1;
+    transition: .4s;
+    visibility: visible;
+}
+
+.features-right li i .ico-hover,
+.features-left li i .ico-hover {
+    opacity: 0;
+    transition: .4s;
+    visibility: hidden;
+    top: 19px;
+}
+
+.features-right li:hover .ico-current,
+.features-left li:hover .ico-current {
+    opacity: 0;
+    transition: .4s;
+    visibility: hidden;
+}
+
+.features-right li:hover .ico-hover,
+.features-left li:hover .ico-hover {
+    opacity: 1;
+    transition: .4s;
+    visibility: visible;
+}
+
+.features-right i {
+    float: left;
+}
+
+.fr-inner {
+    margin-left: 90px;
+}
+
+.features-left i {
+    float: right;
+}
+
+.fl-inner {
+    text-align: right;
+    margin-right: 90px;
+}
+
+#features h4 {
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 19px;
+}
+
+
+/*------------------------------------------------------------------
+    CONTACT
+-------------------------------------------------------------------*/
+
+.bootstrap-select {
+    width: 100% \0;
+    /*IE9 and below*/
+}
+
+.bootstrap-select > .dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+}
+
+.has-error .bootstrap-select .dropdown-toggle,
+.error .bootstrap-select .dropdown-toggle {
+    border-color: #b94a48;
+}
+
+.bootstrap-select.fit-width {
+    width: auto !important;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+    outline: thin dotted #333333 !important;
+    outline: 5px auto -webkit-focus-ring-color !important;
+    outline-offset: -2px;
+}
+
+.bootstrap-select.form-control {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+}
+
+.bootstrap-select.form-control:not([class*="col-"]) {
+    width: 100%;
+}
+
+.bootstrap-select.form-control.input-group-btn {
+    z-index: auto;
+}
+
+.bootstrap-select.btn-group:not(.input-group-btn),
+.bootstrap-select.btn-group[class*="col-"] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+
+.bootstrap-select.btn-group.dropdown-menu-right,
+.bootstrap-select.btn-group[class*="col-"].dropdown-menu-right,
+.row .bootstrap-select.btn-group[class*="col-"].dropdown-menu-right {
+    float: right;
+}
+
+.form-inline .bootstrap-select.btn-group,
+.form-horizontal .bootstrap-select.btn-group,
+.form-group .bootstrap-select.btn-group {
+    margin-bottom: 0;
+}
+
+.form-group-lg .bootstrap-select.btn-group.form-control,
+.form-group-sm .bootstrap-select.btn-group.form-control {
+    padding: 0;
+}
+
+.form-inline .bootstrap-select.btn-group .form-control {
+    width: 100%;
+}
+
+.bootstrap-select.btn-group.disabled,
+.bootstrap-select.btn-group > .disabled {
+    cursor: not-allowed;
+}
+
+.bootstrap-select.btn-group.disabled:focus,
+.bootstrap-select.btn-group > .disabled:focus {
+    outline: none !important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .fa-angle-down {
+    position: absolute;
+    top: 30% !important;
+    right: -5px;
+    vertical-align: middle;
+}
+
+.bootstrap-select.btn-group[class*="col-"] .dropdown-toggle {
+    width: 100%;
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    border: 1px solid #ededed;
+    box-shadow: none;
+    box-sizing: border-box;
+    min-width: 100%;
+    padding: 20px 10px;
+    z-index: 1035;
+}
+
+.dropdown-menu > li > a {
+    background-color: transparent !important;
+    color: #bcbcbc !important;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li {
+    position: relative;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.active small {
+    color: #fff;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.disabled a {
+    cursor: not-allowed;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a {
+    cursor: pointer;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a.opt {
+    position: relative;
+    padding-left: 2.25em;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+    display: none;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li small {
+    padding-left: 0.5em;
+}
+
+.bootstrap-select.btn-group .dropdown-menu .notify {
+    position: absolute;
+    bottom: 5px;
+    width: 96%;
+    margin: 0 2%;
+    min-height: 26px;
+    padding: 3px 5px;
+    background: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    opacity: 0.9;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bootstrap-select.btn-group .no-results {
+    padding: 3px;
+    background: #f5f5f5;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .filter-option {
+    position: static;
+}
+
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .caret {
+    position: static;
+    top: auto;
+    margin-top: 4px;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    margin-top: 5px;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text {
+    margin-right: 34px;
+}
+
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle {
+    z-index: 1036;
+}
+
+.bootstrap-select.show-menu-arrow .dropdown-toggle:before {
+    content: '';
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(204, 204, 204, 0.2);
+    position: absolute;
+    bottom: -4px;
+    left: 9px;
+    display: none;
+}
+
+.bootstrap-select.show-menu-arrow .dropdown-toggle:after {
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+    display: none;
+}
+
+.bootstrap-select.show-menu-arrow.dropup .dropdown-toggle:before {
+    bottom: auto;
+    top: -3px;
+    border-top: 7px solid rgba(204, 204, 204, 0.2);
+    border-bottom: 0;
+}
+
+.bootstrap-select.show-menu-arrow.dropup .dropdown-toggle:after {
+    bottom: auto;
+    top: -3px;
+    border-top: 6px solid white;
+    border-bottom: 0;
+}
+
+.bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle:before {
+    right: 12px;
+    left: auto;
+}
+
+.bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle:after {
+    right: 13px;
+    left: auto;
+}
+
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle:before,
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle:after {
+    display: block;
+}
+
+.bs-searchbox,
+.bs-actionsbox,
+.bs-donebutton {
+    padding: 4px 8px;
+}
+
+.bs-actionsbox {
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bs-actionsbox .btn-group button {
+    width: 50%;
+}
+
+.bs-donebutton {
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bs-donebutton .btn-group button {
+    width: 100%;
+}
+
+.bs-searchbox + .bs-actionsbox {
+    padding: 0 8px 4px;
+}
+
+.bs-searchbox .form-control {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+select.bs-select-hidden,
+select.selectpicker {
+    display: none !important;
+}
+
+select.mobile-device {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    display: block !important;
+    width: 100%;
+    height: 100% !important;
+    opacity: 0;
+}
+
+
+/*# sourceMappingURL=bootstrap-select.css.map */
+
+.bootstrap-select > .btn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    font-size: 15px;
+    height: 33px;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0;
+    width: 100%;
+    color: #bcbcbc !important;
+}
+
+.contact_form {
+    border: 1px solid #ededed;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    background-color: #f2f3f5;
+    padding: 40px 30px;
+}
+
+.contact_form .form-control {
+    background-color: #fff;
+    margin-bottom: 30px;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    color: #bcbcbc;
+    font-size: 16px;
+    outline: 0 none;
+    padding: 10px 25px;
+    height: 55px;
+    resize: none;
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.contact_form textarea {
+    color: #bcbcbc;
+    padding: 20px 25px !important;
+    height: 160px !important;
+}
+
+.contact_form .form-control::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+
+.contact_form .form-control::-moz-placeholder {
+    opacity: 1;
+    color: #bcbcbc;
+}
+
+.contact_form .form-control::-ms-input-placeholder {
+    color: #bcbcbc;
+}
+
+#contact {
+    background: url(images/bg.png) no-repeat center center #fff;
+}
+
+
+/*------------------------------------------------------------------
+    FOOTER
+-------------------------------------------------------------------*/
+
+.cac {
+    background-color: #232323;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.cac:hover a h3 {
+    color: #fff !important;
+}
+
+.cac a h3 {
+    color: #ffffff;
+}
+
+.cac h3 {
+    padding: 60px 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+    line-height: !important;
+}
+
+.footer {
+    padding: 90px 0 80px !important;
+    color: #999;
+    background-color: #1f1f1f;
+}
+
+.footer .widget-title {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.footer .widget-title small {
+    color: #999;
+    display: block;
+    padding: 0 58px;
+    text-transform: uppercase;
+}
+
+.footer .widget-title h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+    line-height: 1 !important;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #010101;
+}
+
+.footer-links a:hover,
+.footer a:hover {
+    color: #ed2d46;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.twitter-widget li {
+    margin-bottom: 0;
+    border: 0 !important;
+}
+
+.twitter-widget li i {
+    border-right: 0 !important;
+    margin-right: 0;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+
+.footer-links i {
+    display: inline-block;
+    width: 25px;
+    margin-right: 10px;
+    border-right: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.copyrights {
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    background-color: #1f1f1f;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 50px 60px;
+    overflow: hidden;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    float: none;
+	text-align: center;
+}
+
+.footer-distributed .footer-links {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+}
+
+.footer-distributed .footer-company-name {
+    font-weight: 300;
+    margin: 0 10px;
+    color: #000000;
+    padding: 0;
+}
+
+
+/* Footer right */
+
+.footer-distributed .footer-right {
+    float: right;
+}
+
+
+/* The search form */
+
+.footer-distributed form {
+    position: relative;
+}
+
+.footer-distributed form input {
+    display: block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #181818;
+    border: none;
+    font: inherit;
+    font-size: 15px;
+    font-weight: normal;
+    color: #999;
+    width: 400px;
+    padding: 18px 50px 18px 18px;
+}
+
+.footer-distributed form input:focus {
+    outline: none;
+}
+
+
+/* Changing the placeholder color */
+
+.footer-distributed form input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.footer-distributed form input::-moz-placeholder {
+    opacity: 1;
+    color: #999;
+}
+
+.footer-distributed form input:-ms-input-placeholder {
+    color: #999;
+}
+
+
+/* The magnify glass icon */
+
+.footer-distributed form i {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    color: #999;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+
+.footer-distributed .footer-company-name a{
+	color: #010101;
+}
+
+.footer-distributed .footer-company-name a:hover{
+	color: #ed2d46;
+}
+
+
+/*------------------------------------------------------------------
+    MISC
+-------------------------------------------------------------------*/
+
+.progress {
+    background-color: #f2f3f5;
+    border-radius: 0;
+    box-shadow: none;
+    height: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.skills h3 {
+    color: #999999;
+    font-size: 15px;
+}
+
+.dmtop {
+    background-color: #3C3D41;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    line-height: 47px;
+    position: fixed;
+    bottom: -100px;
+    border-radius: 0px;
+    right: 50px;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff !important;
+    cursor: pointer;
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+}
+
+.dmtop.show{
+	bottom: 50px;
+}
+
+.icon_wrap {
+    background-color: #1f1f1f;
+    width: 100px;
+    height: 100px;
+    display: block;
+    line-height: 100px;
+    font-size: 34px;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.stat-wrap h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important:
+}
+
+.stat-wrap p {
+    font-size: 38px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 300;
+    padding: 4px 0 0;
+    line-height: 1 !important:
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 11000;
+    position: fixed;
+    display: block
+}
+
+.preloader {
+    position: absolute;
+    margin: 0 auto;
+    left: 1%;
+    right: 1%;
+    top: 45%;
+    width: 95px;
+    height: 95px;
+    background: center center no-repeat none;
+    background-size: 95px 95px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%
+}
+
+
+/*------------------------------------------------------------------
+    BUTTONS
+-------------------------------------------------------------------*/
+
+.navbar-default .btn-light {
+    padding: 0 20px;
+    margin-left: 15px;
+}
+
+.btn-light {
+    padding: 13px 40px;
+    font-size: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 28px;
+    margin-top: 0;
+    padding: 6px 35px;
+    text-transform: uppercase;
+}
+
+.btn-dark {
+    padding: 13px 40px;
+    font-size: 18px;
+    border: 1px solid #ececec !important;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+/*------------------------------------------------------------------
+    Inner Pages
+-------------------------------------------------------------------*/
+
+.all-page-bar{
+	background: url("uploads/barber_all.jpg") no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+
+.all-page-bar::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, 0.7);
+	top: 0px;
+	left: 0px;
+}
+
+.all-page-bar .title{
+	padding: 120px 0 90px 0;
+}
+
+.all-page-bar .title h1{
+	font-size: 40px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.all-page-bar .title .breadcrumb, .all-page-bar .title .breadcrumb a{
+	background: #ed2d46;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	color: #ffffff;
+	border-radius: 2px;
+	display: inline-block;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+.all-page-bar .title .breadcrumb, .all-page-bar .title .breadcrumb li {
+	display: inline-block;
+}
+
+.all-page-bar .title .breadcrumb .active{
+	color: #010101;
+	font-weight: 700;
+}
+
+.much{
+	margin-bottom: 10px;
+}
+
+body.barber_version .service-wrap:hover .uptop{
+	transform: scale(1.07);
+	transition: all 1s ease-in-out;
+	z-index: 1;
+}
+
+body.barber_version .service-wrap:hover .uptop img{
+	border-radius: 100%;
+	transition: all 1s ease-in-out;
+}
+
+.uptop img{
+	transition: all 1s ease-in-out;
+}
+
+.hover-br{
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.hover-br .social-up-hover{
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	transform: none;
+	opacity: 1;
+	transition: all 500ms ease;	
+	background: rgba(237,45,70,0.5);
+}
+
+.team-box{
+	padding: 10px;
+	text-align: left;
+}
+
+
+body.barber_version .dev-list .widget:hover .hover-br .social-up-hover{
+	top: 0%;
+	opacity: 1;
+}
+
+.footer-social{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 32px;
+	width: auto;
+	padding: 0 40px;
+	transform: scale(1.2);
+	transition: all 2s ease-in-out;
+}
+
+body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-social {
+	transform: scale(1.1);
+	opacity: 1;
+	transition: all 2s ease-in-out;
+}
+
+.appointment-left{
+	margin-top: 70px;
+}
+
+.appointment-left h2{
+	font-size: 38px;
+	color: #ed2d46;
+	font-weight: 700;
+}
+
+.appointment-time ul{}
+.appointment-time ul li{
+	color: #ffffff;
+	list-style-type: none;
+	margin-bottom: 45px;
+	border-bottom: 2px dotted #111111;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 34px;
+}
+.appointment-time ul li span{
+	background: #111111;
+	position: relative;
+	top: 5px;
+	padding: 0 5px;
+	display: inline-block;
+}
+.appointment-time ul li span:last-child{
+	float: right;
+}
+
+
+.uptop{
+	display: inline-block;
+	margin: auto;
+	padding: 10px;
+	transition: all 1s ease-in-out;
+	-webkit-box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+	box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+}
+
+.form-btn{
+	padding: 0 15px;
+}
+
+#map {
+    width: 100%;
+    height: 650px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.card {
+  border: 0;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+  transition: all .3s ease-in-out;
+  padding: 2.25rem 0;
+  position: relative;
+  will-change: transform;
+}
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #ed2d46;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+.card:hover:after {
+  width: 100%;
+}
+.card .card-header {
+  background-color: white;
+  padding-left: 2rem;
+  border-bottom: 0px;
+}
+.card .card-title {
+  margin-bottom: 1rem;
+}
+.card .card-block {
+  padding-top: 0;
+}
+.card .list-group-item {
+  border: 0px;
+  padding: .25rem;
+  color: #808080;
+  font-weight: 300;
+}
+
+.display-2 {
+  font-size: 7rem;
+  letter-spacing: -.5rem;
+}
+.display-2 .currency {
+  font-size: 2.75rem;
+  position: relative;
+  font-weight: 400;
+  top: -45px;
+  letter-spacing: 0px;
+}
+.display-2 .period {
+  font-size: 1rem;
+  color: #b3b3b3;
+  letter-spacing: 0px;
+}
+
+.pricing-ti{
+	background: #010101;
+	color: #ffffff;
+	padding: 15px 0px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.line-pricing{
+	padding: 0px 15px;
+	margin-bottom: 20px;
+}
+
+.line-pricing h5{
+	font-size: 14px;
+	font-weight: 600;
+	border-bottom: 1px dashed #010101;
+}
+.line-pricing p{
+	font-size: 12px;
+	margin: 0px;
+	padding-bottom: 5px;
+}
+.line-pricing a{
+	background: #ed2d46;
+	color: #ffffff;
+	border-radius: 2px;
+	padding: 2px 5px;
+}
+.line-pricing a:hover{
+	color: #010101 !important;
+}
+
+
+
+
+
